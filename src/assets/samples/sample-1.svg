@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Cute storybook representation -->
+  <rect x="30" y="30" width="140" height="140" rx="15" fill="#FFF8ED" stroke="#F27FA6" stroke-width="4" />
+  <rect x="45" y="30" width="125" height="140" rx="2" fill="#FFEAF2" />
+  <!-- Book spine lines -->
+  <line x1="45" y1="30" x2="45" y2="170" stroke="#F27FA6" stroke-width="4" />
+  <!-- Flower on cover -->
+  <circle cx="110" cy="95" r="25" fill="#FFD6E3" />
+  <circle cx="110" cy="95" r="10" fill="#FFE066" />
+  <!-- Tiny heart -->
+  <path d="M 110 135 C 105 130, 95 120, 95 110 C 95 102, 101 96, 108 96 C 112 96, 115 99, 117 102 C 119 99, 122 96, 126 96 C 133 96, 139 102, 139 110 C 139 120, 129 130, 124 135 Z" fill="#F27FA6" transform="scale(0.5) translate(80, 80)" />
+</svg>

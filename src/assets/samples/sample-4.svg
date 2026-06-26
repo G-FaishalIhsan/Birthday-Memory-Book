@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Envelope -->
+  <rect x="40" y="70" width="120" height="80" rx="8" fill="#FFF8ED" stroke="#DCC7FF" stroke-width="3" />
+  <path d="M 40 70 L 100 115 L 160 70" fill="none" stroke="#DCC7FF" stroke-width="3" />
+  <path d="M 40 150 L 85 105" fill="none" stroke="#DCC7FF" stroke-width="3" />
+  <path d="M 160 150 L 115 105" fill="none" stroke="#DCC7FF" stroke-width="3" />
+  
+  <!-- Plant in pot -->
+  <rect x="90" y="30" width="20" height="20" rx="3" fill="#FFD1A8" />
+  <!-- Leaves -->
+  <path d="M 100 30 C 90 20, 95 10, 100 5 C 105 10, 110 20, 100 30 Z" fill="#81C784" />
+  <path d="M 98 25 C 85 20, 80 25, 75 25 C 80 30, 90 30, 98 25 Z" fill="#81C784" />
+  <path d="M 102 25 C 115 20, 120 25, 125 25 C 120 30, 110 30, 102 25 Z" fill="#81C784" />
+</svg>

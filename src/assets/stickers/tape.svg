@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" width="120" height="40" opacity="0.8">
+  <!-- Washi tape with jagged/torn edges -->
+  <path d="M 5,5 
+           L 115,5 
+           Q 117,10 115,15 
+           L 118,25 
+           Q 115,30 117,35 
+           L 5,35 
+           Q 3,30 5,25 
+           L 2,15 
+           Q 5,10 5,5 Z" 
+        fill="#FFD1A8" stroke="#FFE9D6" stroke-width="1.5" stroke-dasharray="3,3" />
+</svg>

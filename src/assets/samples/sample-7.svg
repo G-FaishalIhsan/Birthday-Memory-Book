@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Tea cup -->
+  <path d="M 60 90 L 140 90 C 140 130, 60 130, 60 90 Z" fill="#DCC7FF" stroke="#C5B0FF" stroke-width="2" />
+  <!-- Saucer -->
+  <ellipse cx="100" cy="130" rx="50" ry="8" fill="#FFF8ED" stroke="#C5B0FF" stroke-width="2" />
+  <!-- Mug handle -->
+  <path d="M 138 98 C 152 98, 152 118, 138 118" fill="none" stroke="#DCC7FF" stroke-width="4" />
+  
+  <!-- Steam (heart) -->
+  <path d="M 100 65 C 95 60, 85 50, 85 40 C 85 32, 91 26, 98 26 C 102 26, 105 29, 107 32 C 109 29, 112 26, 116 26 C 123 26, 129 32, 129 40 C 129 50, 119 60, 114 65 Z" fill="#FFB7C5" opacity="0.7" transform="scale(0.8) translate(25, 10)" />
+</svg>

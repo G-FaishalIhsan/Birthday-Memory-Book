@@ -1,0 +1,234 @@
+/* Floating Stickers */
+@keyframes floatSticker {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(3deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+.float-slow {
+  animation: floatSticker 5s ease-in-out infinite;
+}
+
+.float-medium {
+  animation: floatSticker 4s ease-in-out infinite;
+}
+
+.float-fast {
+  animation: floatSticker 3s ease-in-out infinite;
+}
+
+/* Gentle blink for stars */
+@keyframes blinkStar {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+.blink-soft {
+  animation: blinkStar 2.5s ease-in-out infinite;
+}
+
+/* Candle flame flicker - subtle and realistic */
+@keyframes flameFlicker {
+  0%, 100% {
+    transform: scale(1) translateY(0);
+    opacity: 0.95;
+  }
+  25% {
+    transform: scale(0.96, 1.04) translateY(-1px) rotate(-1deg);
+    opacity: 0.98;
+  }
+  50% {
+    transform: scale(1.04, 0.96) translateY(0) rotate(1deg);
+    opacity: 0.92;
+  }
+  75% {
+    transform: scale(0.98, 1.02) translateY(-2px) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.flame-flicker {
+  animation: flameFlicker 1.5s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+/* Page fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Cake bouncing gently when candle blown */
+@keyframes cakeBounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05, 0.95);
+  }
+}
+
+.cake-bounce-active {
+  animation: cakeBounce 0.4s ease-in-out;
+}
+
+/* Typing indicator dot */
+@keyframes typingDot {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.typing-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--primary-pink);
+  animation: typingDot 1s infinite ease-in-out;
+}
+
+.typing-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Floating decor styles for random positions */
+.floating-decor-item {
+  position: absolute;
+  pointer-events: none;
+  animation: floatSticker 6s ease-in-out infinite;
+  opacity: 0.2;
+}
+
+/* Confetti falling rain animations (if not using canvas-confetti, we have pure CSS fallback rain) */
+@keyframes rainConfetti {
+  0% {
+    transform: translateY(-20px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.css-confetti-particle {
+  position: fixed;
+  top: -20px;
+  z-index: 99;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  animation: rainConfetti 4s linear forwards;
+}
+
+/* Side Popper fire animation */
+@keyframes shootLeft {
+  0% {
+    transform: scale(0.2) translate(0, 0) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2) translate(-100px, -150px) rotate(-15deg);
+    opacity: 0;
+  }
+}
+
+@keyframes shootRight {
+  0% {
+    transform: scale(0.2) translate(0, 0) rotate(-45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.2) translate(100px, -150px) rotate(15deg);
+    opacity: 0;
+  }
+}
+
+.popper-left-particle {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  animation: shootLeft 1.2s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+}
+
+.popper-right-particle {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  animation: shootRight 1.2s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+}
+
+/* Screen shake for card when lilin ditiup */
+@keyframes screenShake {
+  0%, 100% { transform: translate(0, 0); }
+  10%, 30%, 50%, 70%, 90% { transform: translate(-3px, -2px) rotate(-0.5deg); }
+  20%, 40%, 60%, 80% { transform: translate(3px, 2px) rotate(0.5deg); }
+}
+
+.screen-shake-active {
+  animation: screenShake 0.4s ease-in-out;
+}
+
+/* Slide up and fade in for WhatsApp chat bubbles */
+@keyframes bubbleSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.bubble-slide-in {
+  animation: bubbleSlideIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Slowly panning background for closing page visual montage */
+@keyframes slowPan {
+  0%, 100% {
+    transform: scale(1.03) translate(0px, 0px) rotate(0deg);
+  }
+  33% {
+    transform: scale(1.06) translate(-8px, -12px) rotate(0.5deg);
+  }
+  66% {
+    transform: scale(1.04) translate(6px, -6px) rotate(-0.5deg);
+  }
+}
+
+.slow-pan-bg {
+  animation: slowPan 30s ease-in-out infinite;
+}
+

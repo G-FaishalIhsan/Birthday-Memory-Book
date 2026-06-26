@@ -1,0 +1,345 @@
+/* Scrapbook Container */
+.scrapbook-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  gap: 16px;
+}
+
+/* PageFlip Book Wrapper */
+.book-wrapper {
+  box-shadow: 0 16px 36px rgba(107, 78, 61, 0.18);
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: var(--cream-paper);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Scrapbook Pages */
+.scrapbook-page {
+  width: 100%;
+  height: 100%;
+  background-color: var(--cream-paper);
+  border: 1px solid rgba(242, 127, 166, 0.15);
+  box-sizing: border-box;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  color: var(--brown-text);
+  overflow: hidden;
+  box-shadow: inset 3px 0 10px rgba(0,0,0,0.02);
+}
+
+/* Book binding middle fold line styling */
+.scrapbook-page.left-page {
+  box-shadow: inset -6px 0 12px rgba(107, 78, 61, 0.05);
+  border-right: 1px solid rgba(107, 78, 61, 0.08);
+}
+
+.scrapbook-page.right-page {
+  box-shadow: inset 6px 0 12px rgba(107, 78, 61, 0.05);
+  border-left: 1px solid rgba(107, 78, 61, 0.08);
+}
+
+/* Paper texture effect for scrapbook */
+.paper-texture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(242, 127, 166, 0.04) 1px, transparent 1px);
+  background-size: 100% 28px;
+  pointer-events: none;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+/* Layout components for Scrapbook */
+.page-header {
+  text-align: center;
+  z-index: 2;
+  margin-bottom: 12px;
+}
+
+.page-header h2 {
+  font-family: var(--font-heading);
+  color: var(--dark-brown-heading);
+  font-size: 1.6rem;
+  margin-bottom: 4px;
+}
+
+.page-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  z-index: 2;
+  position: relative;
+}
+
+.page-footer {
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: rgba(107, 78, 61, 0.6);
+  z-index: 2;
+  margin-top: 12px;
+}
+
+/* Polaroid frame inside Scrapbook */
+.scrapbook-polaroid {
+  background-color: var(--white);
+  padding: 10px 10px 18px 10px;
+  box-shadow: 0 6px 16px rgba(107, 78, 61, 0.12);
+  border: 1px solid rgba(107, 78, 61, 0.08);
+  border-radius: 4px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90%;
+  transition: transform 0.2s ease;
+}
+
+.scrapbook-polaroid.rotated-left {
+  transform: rotate(-3deg);
+}
+
+.scrapbook-polaroid.rotated-right {
+  transform: rotate(3deg);
+}
+
+/* Image fixed size in scrapbook cover/pages */
+.scrapbook-img-frame {
+  width: 240px;
+  height: 240px;
+  overflow: hidden;
+  background-color: var(--cream-paper);
+  border: 1px solid rgba(107, 78, 61, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.scrapbook-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  background-color: var(--cream-paper);
+}
+
+/* Tape styling */
+.scrapbook-tape {
+  position: absolute;
+  top: -12px;
+  z-index: 5;
+  width: 80px;
+  height: 24px;
+  opacity: 0.85;
+}
+
+.scrapbook-tape.left {
+  left: 10%;
+  transform: rotate(-15deg);
+}
+
+.scrapbook-tape.right {
+  right: 10%;
+  transform: rotate(15deg);
+}
+
+.scrapbook-tape.top {
+  left: 50%;
+  transform: translateX(-50%) rotate(-2deg);
+}
+
+/* Sticky notes inside Scrapbook */
+.sticky-note {
+  background-color: #FFF9E6;
+  border-left: 5px solid var(--peach);
+  padding: 12px 16px;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--brown-text);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.04);
+  max-width: 95%;
+  position: relative;
+  z-index: 2;
+  font-weight: 500;
+}
+
+.sticky-note.lavender-note {
+  background-color: #F8F4FF;
+  border-left-color: var(--lavender);
+}
+
+/* Long letter text style (Letter Page 1 & 2) */
+.letter-text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--brown-text);
+  text-align: left;
+  white-space: pre-line;
+  max-height: 100%;
+  overflow-y: auto;
+  padding-right: 8px;
+  z-index: 2;
+  width: 100%;
+}
+
+.letter-text h3 {
+  font-family: var(--font-heading);
+  color: var(--dark-brown-heading);
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  border-bottom: 2px dashed var(--soft-pink);
+  padding-bottom: 4px;
+}
+
+/* Custom Navigation Controls */
+.scrapbook-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 440px;
+  margin-top: 10px;
+  gap: 16px;
+}
+
+.control-btn {
+  background-color: var(--white);
+  border: 3.5px solid var(--soft-pink);
+  color: var(--dark-brown-heading);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+  font-size: 1.2rem;
+  transition: all 0.2s ease;
+}
+
+.control-btn:hover:not(:disabled) {
+  transform: scale(1.1);
+  background-color: var(--soft-pink);
+  border-color: var(--primary-pink);
+}
+
+.control-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.page-indicator {
+  font-family: var(--font-heading);
+  color: var(--dark-brown-heading);
+  font-size: 0.95rem;
+  font-weight: bold;
+  background-color: var(--white);
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 2px solid var(--soft-pink);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Sticker decorations */
+.sticker-decor {
+  position: absolute;
+  pointer-events: none;
+  z-index: 4;
+}
+
+/* Small grid of photos for Page Collage */
+.collage-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  max-width: 95%;
+  justify-content: center;
+  align-items: center;
+}
+
+.collage-item {
+  width: 110px;
+  height: 110px;
+  border: 4px solid var(--white);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background-color: var(--cream-paper);
+}
+
+.collage-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .scrapbook-page {
+    padding: 24px 16px;
+  }
+  
+  .page-header h2 {
+    font-size: 1.3rem;
+  }
+  
+  .scrapbook-img-frame {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .collage-grid {
+    gap: 8px;
+  }
+  
+  .collage-item {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .letter-text {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+  
+  .letter-text h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+
+  .scrapbook-controls {
+    justify-content: center;
+    gap: 10px;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .control-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+  
+  .page-indicator {
+    padding: 5px 12px;
+    font-size: 0.85rem;
+  }
+}

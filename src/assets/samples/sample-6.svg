@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Record player base -->
+  <rect x="40" y="50" width="120" height="110" rx="15" fill="#FFEAF2" stroke="#FFD6E3" stroke-width="3" />
+  <!-- Turntable plate -->
+  <circle cx="95" cy="105" r="38" fill="#FFF8ED" />
+  <!-- Vinyl record -->
+  <circle cx="95" cy="105" r="32" fill="#37474F" />
+  <circle cx="95" cy="105" r="10" fill="#FFC0CB" />
+  <circle cx="95" cy="105" r="2" fill="#37474F" />
+  
+  <!-- Tonearm -->
+  <path d="M 140 70 L 140 90 L 115 105" fill="none" stroke="#6B4E3D" stroke-width="3" stroke-linecap="round" />
+  <rect x="110" y="100" width="8" height="8" rx="1" fill="#FFD1A8" />
+  
+  <!-- Music notes -->
+  <path d="M 50 40 C 45 40 40 45 40 50 C 40 55 45 55 50 50 L 50 30 L 70 25 L 70 35 L 50 40 Z" fill="#F27FA6" transform="scale(0.8) translate(30, 10)" />
+</svg>
