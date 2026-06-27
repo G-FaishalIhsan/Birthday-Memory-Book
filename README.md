@@ -1,5 +1,9 @@
 # 🌸 Soft Pastel Memory Book — Cute Interactive Birthday Web App 🎂
 
+<p align="center">
+  <img src="./public/screenshot.png" alt="Landing Page Preview" width="650" style="border-radius: 16px; border: 4px solid #FFD6E3; box-shadow: 0 8px 24px rgba(242, 127, 166, 0.15);" />
+</p>
+
 Website ulang tahun interaktif berdesain *soft pastel* estetik yang dirancang khusus untuk merayakan hari spesial orang terdekat Anda. Proyek ini berjalan di atas React + Vite dengan berbagai gimmick multimedia menarik seperti tiup lilin menggunakan mic, chat WhatsApp tiruan yang lucu, album foto scrapbook digital yang bisa dibalik halamannya, serta digital photobooth webcam!
 
 ---
